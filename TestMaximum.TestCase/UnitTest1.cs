@@ -41,6 +41,17 @@ namespace Test_Maximum.TestCase
             int actualMax = maximumNumber.maximumInteger(225, 375, 467);
             Assert.AreEqual(467, actualMax);
         }
+
+        /// <summary>
+        /// Test case 2.1
+        /// </summary>
+        [Test]
+        public void givenFloatNumFirstPostion_whenFindMax_shouldReturnsMaxFirst()
+        {
+            MaximumNumber md = new MaximumNumber();
+            double actualMax = md.doubleArray(55.5,40.5,20.5);
+            Assert.AreEqual(55.5, actualMax);
+        }
     }
   
 }
