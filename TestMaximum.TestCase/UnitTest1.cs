@@ -48,8 +48,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenFloatNumFirstPostion_whenFindMax_shouldReturnsMaxFirst()
         {
-            MaximumNumber md = new MaximumNumber();
-            double actualMax = md.doubleArray(55.5,40.5,20.5);
+            MaximumNumber maximumNumber = new MaximumNumber();
+            double actualMax = maximumNumber.doubleArray(55.5,40.5,20.5);
             Assert.AreEqual(55.5, actualMax);
         }
 
@@ -59,8 +59,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenFloatNumSecondPostion_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            MaximumNumber md = new MaximumNumber();
-            double actualMax = md.doubleArray(40.5, 55.5, 20.5);
+            MaximumNumber maximumnumber = new MaximumNumber();
+            double actualMax = maximumnumber.doubleArray(40.5, 55.5, 20.5);
             Assert.AreEqual(55.5, actualMax);
         }
 
@@ -70,9 +70,42 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenFloatNumThirdPostion_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            MaximumNumber md = new MaximumNumber();
-            double actualMax = md.doubleArray(40.5, 55.5, 20.5);
+            MaximumNumber maximumnumber = new MaximumNumber();
+            double actualMax = maximumnumber.doubleArray(40.5, 55.5, 20.5);
             Assert.AreEqual(55.5, actualMax);
+        }
+
+        /// <summary>
+        /// Test 3.1
+        /// </summary>
+        [Test]
+        public void givenMaxStringFirstPositon_whenFindMax_shouldReturnsMaxFirstPosition()
+        {
+            MaximumNumber maximum = new MaximumNumber();
+            String actualMax = maximum.MaxString("Peach","Banana","Apple");
+            Assert.AreEqual("Peach",actualMax);
+        }
+
+        /// <summary>
+        /// Test 3.2
+        /// </summary>
+        [Test]
+        public void givenMaxStringSecondPositon_whenFindMax_shouldReturnsMaxSecondPosition()
+        {
+            MaximumNumber maximum = new MaximumNumber();
+            String actualMax = maximum.MaxString("Banana", "Peach", "Apple");
+            Assert.AreEqual("Peach", actualMax);
+        }
+
+        /// <summary>
+        /// Test 3.1
+        /// </summary>
+        [Test]
+        public void givenMaxStringThirdPositon_whenFindMax_shouldReturnsMaxThirdPosition()
+        {
+            MaximumNumber maximum = new MaximumNumber();
+            String actualMax = maximum.MaxString("Apple", "Banana", "Peach");
+            Assert.AreEqual("Peach", actualMax);
         }
     }
 }
