@@ -30,6 +30,17 @@ namespace Test_Maximum.TestCase
             int actualMax = maximumNumber.maximumInteger(225, 375, 157);
             Assert.AreEqual(375, actualMax);
         }
+
+        /// <summary>
+        /// Test case 1.3
+        /// </summary>
+        [Test]
+        public void givenMaxNumThirdPosition_whenFindMaxNum_shouldReturnsMaxThird()
+        {
+            MaximumNumber maximumNumber = new MaximumNumber();
+            int actualMax = maximumNumber.maximumInteger(225, 375, 467);
+            Assert.AreEqual(467, actualMax);
+        }
     }
   
 }
