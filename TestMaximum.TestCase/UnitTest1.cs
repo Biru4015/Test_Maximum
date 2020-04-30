@@ -63,5 +63,16 @@ namespace Test_Maximum.TestCase
             double actualMax = md.doubleArray(40.5, 55.5, 20.5);
             Assert.AreEqual(55.5, actualMax);
         }
+
+        /// <summary>
+        /// Test case 2.3
+        /// </summary>
+        [Test]
+        public void givenFloatNumThirdPostion_whenFindMax_shouldReturnsMaxThirdPosition()
+        {
+            MaximumNumber md = new MaximumNumber();
+            double actualMax = md.doubleArray(40.5, 55.5, 20.5);
+            Assert.AreEqual(55.5, actualMax);
+        }
     }
 }
