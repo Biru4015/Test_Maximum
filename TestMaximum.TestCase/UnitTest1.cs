@@ -15,7 +15,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenMaxNumFirstPosition_whenFindMaxNum_shouldReturnsMaxFirst()
         {
-            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(225,100,24);
+            int[] arr = { 225, 100, 24 };
+            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(arr);
             int actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual(225, actualMax);
         }
@@ -26,7 +27,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenMaxNumSecondPosition_whenFindMaxNum_shouldReturnsMaxSecond()
         {
-            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(225, 375, 157);
+            int[] arr = { 225, 375, 157 };
+            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(arr);
             int actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual(375, actualMax);
         }
@@ -37,7 +39,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenMaxNumThirdPosition_whenFindMaxNum_shouldReturnsMaxThird()
         {
-            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(225, 375, 467);
+            int[] arr = { 225, 375, 467 };
+            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(arr);
             int actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual(467, actualMax);
         }
@@ -48,7 +51,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenFloatNumFirstPostion_whenFindMax_shouldReturnsMaxFirst()
         {
-            GenericMaxValue<double> obj_maxvalue = new GenericMaxValue<double>(55.5, 40.5, 20.5);
+            double[] arr = { 55.5, 40.5, 20.5 };
+            GenericMaxValue<double> obj_maxvalue = new GenericMaxValue<double>(arr);
             double actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual(55.5, actualMax);
         }
@@ -59,7 +63,8 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenFloatNumSecondPostion_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            GenericMaxValue<double> obj_maxvalue = new GenericMaxValue<double>(40.5, 55.5, 20.5);
+            double[] arr = { 40.5, 55.5, 20.5 };
+            GenericMaxValue<double> obj_maxvalue = new GenericMaxValue<double>(arr);
             double actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual(55.5, actualMax);
         }
@@ -70,42 +75,70 @@ namespace Test_Maximum.TestCase
         [Test]
         public void givenFloatNumThirdPostion_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            GenericMaxValue<double> obj_maxvalue = new GenericMaxValue<double>(40.5, 55.5, 20.5);
+            double[] arr = { 40.5, 55.5, 20.5 };
+            GenericMaxValue<double> obj_maxvalue = new GenericMaxValue<double>(arr);
             double actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual(55.5, actualMax);
         }
 
         /// <summary>
-        /// Test 3.1
+        /// Test case 3.1
         /// </summary>
         [Test]
         public void givenMaxStringFirstPositon_whenFindMax_shouldReturnsMaxFirstPosition()
         {
-            GenericMaxValue<string> obj_maxvalue = new GenericMaxValue<string>("Peach", "Banana", "Apple");
+            String[] arr = { "Peach", "Banana", "Apple" };
+            GenericMaxValue<string> obj_maxvalue = new GenericMaxValue<string>(arr);
             String actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual("Peach",actualMax);
         }
 
         /// <summary>
-        /// Test 3.2
+        /// Test case 3.2
         /// </summary>
         [Test]
         public void givenMaxStringSecondPositon_whenFindMax_shouldReturnsMaxSecondPosition()
         {
-            GenericMaxValue<string> obj_maxvalue = new GenericMaxValue<string>("Banana", "Peach", "Apple");
+            String[] arr = { "Banana", "Peach", "Apple"};
+            GenericMaxValue<string> obj_maxvalue = new GenericMaxValue<string>(arr);
             String actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual("Peach", actualMax);
         }
 
         /// <summary>
-        /// Test 3.3
+        /// Test case 3.3
         /// </summary>
         [Test]
         public void givenMaxStringThirdPositon_whenFindMax_shouldReturnsMaxThirdPosition()
         {
-            GenericMaxValue<string> obj_maxvalue = new GenericMaxValue<string>("Apple", "Banana", "Peach");
+            String[] arr = { "Apple", "Banana", "Peach" };
+            GenericMaxValue<string> obj_maxvalue = new GenericMaxValue<string>(arr);
             String actualMax = obj_maxvalue.MaxMethod();
             Assert.AreEqual("Peach", actualMax);
+        }
+
+        /// <summary>
+        /// Test case 4.1
+        /// </summary>
+        [Test]
+        public void givenMoreThreeValue_whenFindMax_shouldReturnsMaxValue()
+        {
+            int[] arr = { 67, 23, 99, 44 };
+            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(arr);
+            int actualMax = obj_maxvalue.MaxMethod();
+            Assert.AreEqual(99,actualMax);
+        }
+
+        /// <summary>
+        /// Test case 4.2
+        /// </summary>
+        [Test]
+        public void givenMoreThreeValue1_whenFindMax_shouldReturnsMaxValue()
+        {
+            int[] arr = { 112, 344, 432, 555, 678 };
+            GenericMaxValue<int> obj_maxvalue = new GenericMaxValue<int>(arr);
+            int actualMax = obj_maxvalue.MaxMethod();
+            Assert.AreEqual(678, actualMax);
         }
     }
 }
