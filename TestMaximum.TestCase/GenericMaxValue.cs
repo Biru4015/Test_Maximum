@@ -51,7 +51,7 @@ namespace TestMaximum.TestCase
         public  generic_type[] Sort(generic_type[] values)
         {
             // a temporary variable
-            /*generic_type temp;
+            generic_type temp;
             // bobble sort
             for (int i = 0; i < values.Length - 1; i++)
             {
@@ -64,9 +64,18 @@ namespace TestMaximum.TestCase
                         values[j] = temp;
                     }
                 }
-            }*/
-            Array.Sort(values);
+            }
             return values;
+        }
+
+        /// <summary>
+        /// This method is printing maximum generic value
+        /// </summary>
+        /// <param name="values"></param>
+        public void printMax(params generic_type[] values)
+        {
+            var max = MaxValue(this.val);
+            Console.WriteLine("Maximum value is "+max);
         }
     }
 }
